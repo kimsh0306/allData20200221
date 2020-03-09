@@ -15,7 +15,7 @@ public class DBConnectionMgr {
 	//물리적으로 떨어져 있는 오라클 서버에 URL정보 추가
 	public static final String _URL 
 		= "jdbc:oracle:thin:@192.168.0.26:1521:orcl11";//여기까지-------------전역변수이면서 상수
-	public static String _USER = "bank";//scott
+	public static String _USER = "scott";//scott
 	public static String _PW = "tiger";
 	//static은 클래스급이다.공유를 생각하라(하나다)=>하나를 접근하는 것이다.정적변수다.
 	private static DBConnectionMgr dbMgr = null;
