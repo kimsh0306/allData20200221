@@ -8,6 +8,13 @@ public class Sonata {
 	//전역 변수 위치
 	String carColor = null; //참조형(reference type-주소번지 출력) 타입을 선언할 때 쓰는 예약어임.
 	int speed;  //전역변수- 초기화를 생략할 수 있다.왜 안해도 되지? -생성자가 해주니깐...
+	public boolean methodA(int a, int b) {
+		boolean isOk = false;
+		if(a==b) {
+			isOk = true;
+		}
+		return isOk;
+	}
 	
 	public static void main(String[] args) {
 		//선언

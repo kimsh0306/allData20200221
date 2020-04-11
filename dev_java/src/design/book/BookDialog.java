@@ -64,7 +64,7 @@ public class BookDialog extends JDialog implements ActionListener{
 	public void initDisplay() {
 		jbtn_save.addActionListener(this);
 		jbtn_close.addActionListener(this);
-		jp_center.setLayout(null);
+		jp_center.setLayout(null);	//null의 의미 => 좌표값으로 배치할거야.
 		jp_south.setLayout(new FlowLayout(FlowLayout.CENTER));
 		jp_south.add(jbtn_save);
 		jp_south.add(jbtn_close);
@@ -93,14 +93,16 @@ public class BookDialog extends JDialog implements ActionListener{
 	public String getB_Title() { return jtf_title.getText();}
 	public void setB_Title(String title) {jtf_title.setText(title);}
 	
-	/*
+	
 	public static void main(String[] args) {
 		BookDialog bd = new BookDialog();
 		bd.isView = true;
 		bd.set("입력",true,null);
 		//bd.initDisplay();
 	}
-	*/
+	
+	
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String command = e.getActionCommand();//이벤트 소스의 라벨
