@@ -49,7 +49,7 @@ statusText:HTTP상태 코드에 대한 문자열 반환함.  OK Not Found
 	function getBoardSold(){
 		alert("getBoardSold 호출 성공");
 		$.ajax({
-			url: "boardAction.jsp"
+			url: "boardAction5.jsp"
 		   ,method: "get"
 		   ,dataType: "text"
 		   ,success:function(data){
@@ -62,8 +62,8 @@ statusText:HTTP상태 코드에 대한 문자열 반환함.  OK Not Found
 			   $("#cash").text(marzin);
 		   }
 		   ,error:function(xhrObject){//xhrObject == XMLHttpRequest
-			   //alert(xhrObject.responseText);
-		   		document.write(xhrObject.responseText);
+			   alert(xhrObject.responseText);
+		   	//document.write(xhrObject.responseText);
 		   }
 		});
 		//0-1-2-3-4
