@@ -35,7 +35,6 @@ public class Method_Prac1 {
 		for (int i = 0; i < score.length; i++) {//score.length말고 inwon을 적어도 된다.
 			score[i] = scan.nextInt();//score 배열의 0번째 방을 초기화 시켰다. 스캐너로 입력 받은 값으로 초기화 시킨 것이다.
 		}
-		
 	}
 	
 	public void q01_2() {
@@ -48,7 +47,6 @@ public class Method_Prac1 {
 		for (int i = 0; i < score.length; i++) {//score.length말고 inwon을 적어도 된다.
 			score[i] = scan.nextInt();//score 배열의 0번째 방을 초기화 시켰다. 스캐너로 입력 받은 값으로 초기화 시킨 것이다.
 		}
-		
 	}
 	
 	public static void main(String[] args) {
@@ -56,5 +54,4 @@ public class Method_Prac1 {
 		Scanner sc = new Scanner(System.in);
 		mp1.q01_1(sc.nextInt());//main에서 인원 수가 결정되었다.
 	}
-	
 }

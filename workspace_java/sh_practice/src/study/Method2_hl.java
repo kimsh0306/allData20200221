@@ -8,8 +8,8 @@ public class Method2_hl {
 	public int[] getRank() {
 		
 		int inwon = Integer.parseInt(JOptionPane.showInputDialog("몇 명입니까?"));
-		int[] score = new int[inwon];
-		int[] rank = new int[inwon];
+		int[] score = new int[inwon];	//점수를 담을 배열
+		int[] rank = new int[inwon];	//점수를 비교한 후 석차를 담을 배열
 		for (int i = 0; i < inwon; i++) {
 			score[i] = Integer.parseInt(JOptionPane.showInputDialog((i+1)+"번째 사람의 점수를 입력하세요."));
 		}

@@ -12,7 +12,7 @@ public class Arr_prac1 {
 		
 		int[] number = new int[5];
 		for (int i = 0; i < number.length; i++) {
-			number[i] = i+3; 
+			number[i] = i+1; 
 		}
 //		for(자료형 변수명 : 배열명) {
 //			실행문
