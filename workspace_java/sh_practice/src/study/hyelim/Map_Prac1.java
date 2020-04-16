@@ -65,8 +65,8 @@ public class Map_Prac1 {
 		rMap.put("수학", true);
 		rMap.put("영어", "통과");
 		mList.add(rMap);//69번에서 rMap을 새로 만든다. 없어지기 전에 mList에 담아주자.
-
-		rMap = new HashMap<String, Object>(); //rMap을 새로 만드는 이유.. 중요하다..!
+		
+		rMap = new HashMap<String, Object>(); //rMap을 새로 만드는 이유.. 중요하다..!***	
 		rMap.put("국어", 80);
 		rMap.put("수학", false);
 		rMap.put("영어", "실패");

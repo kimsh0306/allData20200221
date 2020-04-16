@@ -21,13 +21,16 @@ public class PersonDao {
 	Map<String,Object>	pMap = null;
 	
 	public void getPersonlist() {
+		//pstmt가 오라클에 갈 때 요청하는 문장을 가지고 가야한다.
+		//pstmt가 이 문자열을 가지고 오라클 서버로 가서 sql문으로 작용한다.
 		StringBuilder sql = new StringBuilder();
 		sql.append("SELECT P_no,P_name,P_height,p_loc");
 		sql.append(" FROM Personlist");//두 줄로 작성할 때 앞에 공백 넣어야 한다.
 		
 		try {
-			pList = new ArrayList<Map<String,Object>>();
+			pList = new ArrayList<>();
 			con = dbMgr.getConnection();
+		
 			pstmt = con.prepareStatement(sql.toString());
 			rs = pstmt.executeQuery(); //테이블에 대한 정보가 여기에 담겼다.
 			while(rs.next()) {
@@ -43,12 +46,14 @@ public class PersonDao {
 			System.out.println(pList.size());
 					
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 		
 	}
 	public static void main(String[] args) {
 		PersonDao pd = new PersonDao();
 		pd.getPersonlist();
+		int aa = (int) pd.pList.get(0).get("p_no");
+		System.out.println(aa);
 	}
 }
