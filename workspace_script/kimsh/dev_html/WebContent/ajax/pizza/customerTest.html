@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<!--
+트위터나 소셜에서는
+fetch함수를 사용한다.
+CustomerFetch.html
+  -->
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 이 에러 메시지가 나오면 임포트를 안 한 것이다. => $ is not defined -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.4.1js"></script>
+</head>
+<body>
+	<!-- 
+	아이디 d_info를 선언하는 div태그가 script 안에 위치할 때와 위에 위치할 때의 차이를 말할 수 있어야 한다.  
+	모른다면 ready함수에 대해 복습해야 한다.
+	ready함수를 사용할 때는 위치 상관 없다.
+	ready함수를 사용하지 않을 때는 위에 위치해야 안전하다.
+	-->
+	<div id="d_info"></div>
+	
+<script type="text/javascript">
+//ready함수를 사용하지 않고 있다.
+//ready함수를 사용할 때와 사용하지 않았을 때 차이점에 대해 말할 수 있어야 한다.
+
+	$.ajax({
+		//전송방식 필요
+		method:'get'	//or post => data 속성을 같이 사용함.
+		//get방식을 썼다는 것 (사용자가 서버에게-요청, 서버가 사용자에게-응답)
+		//웹상에서 처리할 것이기 때문에 jsp파일
+		,url:'customerinfo.jsp'
+		,dataType: 'json'
+		//result는 파라미터로 넘어온다.
+		,success:function(result){
+			alert(result);		
+			//fetch함수로 처리 시에는 result.trim()을 해서 공백문자를 제거한다.***
+			var res = JSON.stringify(result);
+			var resDos = JSON.parse(res);//배열전환
+			for(var i=0;i<resDoc.length;i++){
+				alert(resDoc[i].mem_tel);
+				if("02-222-2222"==resDoc[i].mem_tel){
+					alert(resDoc[i].mem_addr);
+				}
+			}
+		}
+	});
+</script>
+
+</body>
+</html>

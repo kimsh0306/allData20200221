@@ -212,9 +212,10 @@
 		</div>
 		<!--=============== [[ 메뉴 선택에 따른  내용 ]] ==============-->	
 		<div data-options="region:'center',title:'영화예매 시스템'" style="padding:5px;background:#eee;">
-	       	<div style="margin:10px 0;"></div>
+	       	<div style="margin:5px 0;"></div>
 	       	Home > 회원관리 > 회원목록
-	       	<div style="margin:10px 0;"></div>
+	       	<hr>
+	       	<div style="margin:20px 0;"></div>
 	       	<!--@@@@@@@@@@@@@ 검색조건 추가하기 @@@@@@@@@@@@-->
 	       	<label>이름 : </label>
 	       	<input id="sb_name" class="easyui-searchbox"/>
@@ -224,6 +225,15 @@
 	       	<input id="db_birth" class="easyui-datebox" style="width:140px;">
 	       	<div style="margin:10px 0;"></div>
 	       	<!--@@@@@@@@@@@@@ 회원관리 @@@@@@@@@@@@-->
+	       	<a id="btn_sel" href="javascript:memberList()" class="easyui-linkbutton" 
+					data-options="iconCls:'icon-search'">조회</a>		
+	       	<a id="btn_ins" href="javascript:memberInsert()" class="easyui-linkbutton" 
+					data-options="iconCls:'icon-add'">입력</a>		
+	       	<a id="btn_upd" href="javascript:memberInsert()" class="easyui-linkbutton" 
+					data-options="iconCls:'icon-edit'">수정</a>		
+	       	<a id="btn_del" href="javascript:memberInsert()" class="easyui-linkbutton" 
+					data-options="iconCls:'icon-remove'">삭제</a>		
+	       	<div style="margin:5px 0;"></div>
 			<div id="dg_member"></div>
 			<div id="pp" class="easyui-pagination" style="background:#efefef;border:1px solid #ccc;"
         		data-options="total:3,pageSize:3">
