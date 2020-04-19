@@ -12,29 +12,19 @@ import javax.swing.table.DefaultTableModel;
 public class BookView {
 	
 	JFrame jf_book = new JFrame();
-	
-	
 	JPanel jp_north = new JPanel();			//버튼을 붙일 패널
 	JButton jbtn_sel = new JButton("조회");	//파라미터로 버튼에 표시할 문자 넣어주기
 	JButton jbtn_ins = new JButton("추가");
 	
-	//DefaultTableMode에 데이터를 담아줘야 한다.
-	//그래서 컬럼을 먼저 설정해 준다.
 	String[] cols = {"책제목","저자","설명"};
-	//예비 공간을 만들어 두었다.
 	String[][] data = new String[0][3];
-	
 	DefaultTableModel dtm_book = new DefaultTableModel(data,cols);
-	//위에서 배열로 생성한 것들을 dtm_book에 넣어 주었다. 이제 컬럼으로 cols 배열을 가지고 있게 된다.
-	//여기서 cols은 html에서 thead의 역할이고, data는 tbody의 역할이다.
-	
+
 	JTable jt_book = new JTable(dtm_book);//JTable은 그냥 양식일 뿐이다. 데이터를 넣을 수 없다는 것이다.
-	
 	
 	//JScrollPane은 데이터의 양이 많을 경우 스크롤바를 제공해 준다.
 	JScrollPane js_book = new JScrollPane(jt_book, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
 												 JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-	
 	
 	//BookLogic에서 이벤트를 처리하기 위해 BookLogic을 인스턴스화 한다.
 	//여기서 this를 넣는 것은 원본 주소번지가 변하면 안되기 때문이다.
@@ -56,7 +46,7 @@ public class BookView {
 		
 		///여기까지 했으면 JFrame의 구성이 끝났다. 이제 눈에 보이게 하자.
 		
-		jf_book.setSize(300,400);
+		jf_book.setSize(300,400);//크기를 가로 300에 세로 400으로 설정했다.
 		jf_book.setVisible(true);//눈에 보이게 해줬다.
 	}
 	

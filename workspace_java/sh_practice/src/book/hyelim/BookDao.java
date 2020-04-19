@@ -26,7 +26,7 @@ public class BookDao {
 		//오라클에 보낼 sql문을 작성해보자
 		StringBuilder sql = new StringBuilder();
 		sql.append("SELECT b_no, b_title, b_author, b_info");
-		sql.append(" FROM book2020");
+		sql.append(" FROM book");
 		
 		try {
 			

@@ -26,7 +26,7 @@ public class BookLogic implements ActionListener{
 	이벤트 처리를 해주는 ActionPerformed라는 메소드를 무조건 가지고 있어야 한다. 왜냐면 그게 ActionLister라는
 	인터페이스를 상속받는 목적이니까. 하지만 ActionPerformed 안에서 어떤 행동을 할 지는 결정되지 않아서 ActionLister라는
 	인터페이스를 정의 할 때 어떤 행동을 할 지 정의해주지 못 했다. 그래서 인터페이스를 만들 때는 그냥 ActionPerformed를 *추상메소드*로 남겨놓고,
-	 사용자가 이 인터페이스를 상속 받을 때 이 메소드를 구현하게끔 한 것이다. 
+	 사용자가 이 인터페이스를 상속 받을 때 이 메소드를 구현하게끔 한 것이다.
 	결론 : 인터페이스를 상속 받을 땐 추상 메소드를 구현해줘야 한다.
 	 */
 	
